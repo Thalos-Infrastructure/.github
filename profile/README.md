@@ -1,7 +1,6 @@
 <p align="center">
-  <img src="profile/thalos-demo-medium.gif"
-       width="550"
-       style="border-radius:20px;"
+  <img src="https://raw.githubusercontent.com/Thalos-Infrastructure/.github/4bfdfd6408ca8a75f16d66f03364177449bc227b/profile/thalos-demo-medium.gif"
+       width="600"
        alt="Thalos Demo"/>
 </p>
 
