@@ -1,6 +1,7 @@
 <p align="center">
-  <img src="assets/thalos-demo-new.gif" 
-       width="700" 
+  <img src="profile/thalos-demo-medium.gif"
+       width="550"
+       style="border-radius:20px;"
        alt="Thalos Demo"/>
 </p>
 
