@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="assets/thalos-demo-new.gif" 
+       width="700" 
+       alt="Thalos Demo"/>
+</p>
+
 # Thalos
 
 Thalos is a trustless escrow infrastructure designed to bring security, clarity, and reliability to digital work agreements. 
