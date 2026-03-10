@@ -6,7 +6,7 @@
 
 # Thalos
 
-Thalos is a trustless escrow infrastructure designed to bring security, clarity, and reliability to digital work agreements. 
+Thalos is a trustless escrow platform designed to bring security, clarity, and reliability to digital work agreements. 
 
 ---
 
@@ -22,7 +22,7 @@ Our goal is to make digital agreements as secure as they are simple.
 
 ## Vision
 
-To become the foundational trust infrastructure for digital work worldwide.
+To become the foundational trust platform for digital work worldwide.
 
 We envision a future where remote collaboration, freelance work, and global partnerships operate without fear of non-payment, fraud, or ambiguity — where trust is embedded directly into the system.
 
@@ -55,7 +55,7 @@ Under the hood, Thalos leverages Trustless Work technology to ensure that the lo
 ## Core Principles
 
 - Security First: Funds must always be protected by transparent and enforceable logic.
-- Simplicity: Advanced infrastructure should feel intuitive and accessible.
+- Simplicity: Advanced escrow tech should feel intuitive and accessible.
 - Neutrality: The system should protect both parties equally.
 - Scalability: Designed to support the future of remote and borderless work.
 
@@ -111,7 +111,7 @@ Under the hood, Thalos leverages Trustless Work technology to ensure that the lo
 
 ## Get Involved
 
-We are building infrastructure for the future of digital work.  
+We are building the trust layer for the future of digital work.
 If you are interested in collaboration, feedback, or partnerships, reach out:
 
 Email: thalosinfrastructure@gmail.com  
