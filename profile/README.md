@@ -115,7 +115,7 @@ We are building the trust layer for the future of digital work.
 If you are interested in collaboration, feedback, or partnerships, reach out:
 
 Email: thalosinfrastructure@gmail.com  
-Website: https://thalos-prototype.vercel.app/about  
+Website: https://www.thalosplatform.xyz
 
 ---
 
