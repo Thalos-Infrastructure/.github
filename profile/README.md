@@ -5,8 +5,7 @@
 </p>
 
 <p align="center">
- 
-  Escrow orchestration on Stellar · powered by Trustless Work
+ Escrow orchestration on Stellar · powered by Trustless Work
 </p>
 
 # Thalos
