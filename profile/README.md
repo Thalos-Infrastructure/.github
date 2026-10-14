@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./thalos_dragon-tagline.gif"
+  <img src="https://raw.githubusercontent.com/Thalos-Infrastructure/.github/main/profile/thalos_dragon-tagline.gif"
        width="640"
        alt="Thalos"/>
 </p>
