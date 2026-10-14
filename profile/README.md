@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./thalos-header.gif"
+  <img src="./thalos_dragon-tagline.gif"
        width="640"
        alt="Thalos"/>
 </p>
