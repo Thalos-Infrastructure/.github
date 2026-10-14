@@ -34,10 +34,8 @@ Companies (payers) and Providers (payees) share one cycle. Either side can open 
 | Resource | URL |
 | --- | --- |
 | Website | https://www.thalosplatform.xyz |
-| Platform | https://thalos.app |
 | Frontend | https://github.com/Thalos-Infrastructure/ThalosFrontend |
 | Backend | https://github.com/Thalos-Infrastructure/ThalosBackend |
-| Documentation | https://github.com/Thalos-Infrastructure/thalos-docs |
 | linktr | https://linktr.ee/Thalosplatform |
 | Trustless Work Docs | https://docs.trustlesswork.com |
 | Stellar Network | https://stellar.org |
