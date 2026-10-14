@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <b>Digital agreements.</b><br/>
+ 
   Escrow orchestration on Stellar · powered by Trustless Work
 </p>
 
