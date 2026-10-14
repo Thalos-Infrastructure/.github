@@ -1,72 +1,126 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Thalos-Infrastructure/.github/4bfdfd6408ca8a75f16d66f03364177449bc227b/profile/thalos-demo-medium.gif"
-       width="600"
-       alt="Thalos Demo"/>
+  <img src="./thalos-agreement-flow.gif" width="720" alt="Thalos agreement lifecycle — Companies & Providers"/>
+</p>
+
+<p align="center">
+  <b>Digital agreements.</b><br/>
+  Escrow orchestration on Stellar · powered by Trustless Work
 </p>
 
 # Thalos
 
-Thalos is a trustless escrow platform designed to bring security, clarity, and reliability to digital work agreements. 
+Thalos is an escrow orchestration layer built on the **Stellar** network. It connects transparently with the **[Trustless Work](https://docs.trustlesswork.com)** protocol to offer programmable agreements and milestone-based payments — simple and secure, designed for end users who need to protect their transactions without dealing with blockchain complexity.
+
+> Funds stay secured until approval. Agreements that hold.
 
 ---
 
 ## Overview
 
-Digital collaboration has grown exponentially, but trust mechanisms have not evolved at the same pace. Payments are often based on informal agreements, screenshots, or blind upfront transfers. This creates friction, disputes, and financial risk for both sides.
+Digital work still often relies on informal deals, screenshots, or blind upfront transfers. That creates friction, disputes, and risk for both sides.
 
-Thalos solves this problem by introducing programmable, trust-minimized escrow agreements powered by Trustless Work technology. Instead of relying on personal trust or centralized intermediaries, funds are secured under transparent and verifiable rules. Payments are released only when agreed conditions are met.
+Thalos replaces that with transparent, verifiable escrow rules:
 
-Our goal is to make digital agreements as secure as they are simple.
+**create → fund → work → evidence → review → approve → release**  
+(optional **dispute** when needed)
 
----
-
-## Vision
-
-To become the foundational trust platform for digital work worldwide.
-
-We envision a future where remote collaboration, freelance work, and global partnerships operate without fear of non-payment, fraud, or ambiguity — where trust is embedded directly into the system.
+Companies (payers) and Providers (payees) share one cycle. Either side can open an agreement; funding and release stay non-custodial via wallet signatures. Settlement is **USDC** on Stellar / Soroban.
 
 ---
 
-## Mission
+## Platform Links
 
-To empower individuals and organizations to work together safely by:
-
-- Providing programmable escrow agreements.
-- Reducing counterparty risk in digital transactions.
-- Making trustless financial tools accessible to non-technical users.
-- Designing intuitive experiences on top of secure blockchain infrastructure.
-
----
-
-## How Thalos Works
-
-1. Two parties define the scope and conditions of a job.
-2. Funds are deposited into a secure escrow contract.
-3. The system holds funds under predefined rules.
-4. Payment is released automatically when conditions are fulfilled.
-
-This approach removes uncertainty while preserving fairness and transparency.
-
-Under the hood, Thalos leverages Trustless Work technology to ensure that the logic governing escrow agreements cannot be arbitrarily altered and does not depend on centralized control.
+| Resource | URL |
+| --- | --- |
+| Website | https://www.thalosplatform.xyz |
+| Platform | https://thalos.app |
+| Frontend | https://github.com/Thalos-Infrastructure/ThalosFrontend |
+| Backend | https://github.com/Thalos-Infrastructure/ThalosBackend |
+| Documentation | https://github.com/Thalos-Infrastructure/thalos-docs |
+| Instagram | https://instagram.com/thalos_platform |
+| Trustless Work Docs | https://docs.trustlesswork.com |
+| Stellar Network | https://stellar.org |
+| Contact | thalosinfrastructure@gmail.com |
 
 ---
 
-## Core Principles
+## Tech Stack
 
-- Security First: Funds must always be protected by transparent and enforceable logic.
-- Simplicity: Advanced escrow tech should feel intuitive and accessible.
-- Neutrality: The system should protect both parties equally.
-- Scalability: Designed to support the future of remote and borderless work.
+| Layer | Technology |
+| --- | --- |
+| Frontend | Next.js 16, React 19, TypeScript 5 |
+| Styling | Tailwind CSS 4, shadcn/ui, Radix UI |
+| Wallet Integration | Stellar Wallets Kit, Freighter API |
+| Escrow Protocol | Trustless Work API |
+| Smart Contracts | Soroban (Stellar) |
+| Primary Asset | USDC (Circle) |
+| Backend | Node.js, PostgreSQL, Redis *(expanding)* |
+| Deployment | Vercel |
 
 ---
 
-## Product Focus
+## 1. System Architecture
 
-- Customizable escrow agreements.
-- Drag-and-drop escrow configuration (wizard-based UX).
-- Mobile-responsive experience.
-- Secure blockchain-backed settlement logic.
+Four-layer platform architecture: how Thalos connects users to Stellar.
+
+| Layer | Components | Status |
+| --- | --- | --- |
+| **Client** | Next.js frontend, Stellar Wallets Kit | Active |
+| **Wallets** | Freighter, xBull, LOBSTR, Albedo, Rabet | Active |
+| **Backend** | Auth, Agreement, User, Notification, Analytics · PostgreSQL · Redis | Expanding |
+| **Escrow** | Trustless Work API | Active |
+| **Blockchain** | Stellar Network, Soroban smart contracts, USDC trustline | Active |
+
+- **Client** — UI, wallet connect, agreement UX (perspective, status, next action).
+- **Backend** — authentication, agreement metadata, notifications *(roadmap hardening)*.
+- **Escrow** — Trustless Work orchestrates contract operations.
+- **Stellar** — executes and settles on-chain USDC flows.
+
+---
+
+## 2. Main User Flow
+
+End-to-end journey from first visit to completed agreement. Supports **Personal** and **Enterprise** accounts, with role-specific paths for payers and providers.
+
+| # | Phase | Description |
+| --- | --- | --- |
+| 1 | Entry | Visit thalos.app / landing |
+| 2 | Authentication | Choose Personal or Enterprise · connect wallet |
+| 3 | Dashboard | Active agreements, balances, metrics |
+| 4 | Create Agreement | Title, amount, milestones, counterparty |
+| 5 | Fund Escrow | Payer signs · USDC locked in contract |
+| 6 | Execute Milestones | Work → evidence → review → release loop |
+| 7 | Dispute Resolution | Optional · evidence, arbitration, decision |
+| 8 | Completion | Settled on-chain · history recorded |
+
+### Agreement lifecycle (Companies & Providers)
+
+One shared cycle — either party can start; roles stay fixed after create:
+
+| Step | Who acts | Notes |
+| --- | --- | --- |
+| Create agreement | Companies or Providers | Roles · milestones · **not funded yet** |
+| Fund escrow | Companies | USDC locked by company |
+| Wallet signs (fund) | Companies | Non-custodial fund tx |
+| Work in progress | Providers | Funded · work can start |
+| Submit evidence | Providers | Deliverable / GitHub |
+| In review | Companies | Approve · change · dispute |
+| Dispute *(optional)* | Both | Trustless Work rules |
+| Approve milestone | Companies | Unlocks release |
+| Wallet signs (release) | Companies | Non-custodial release |
+| Release funds | Providers | USDC to provider |
+| Completed | Providers | Settled on-chain |
+
+**On-chain rails:** Trustless Work (audited Soroban escrow) · Stellar (USDC settlement).
+
+---
+
+## Principles
+
+- **Security first** — funds protected by enforceable on-chain logic.
+- **Simplicity** — escrow should feel like normal product UX.
+- **Neutrality** — protect company and provider equally.
+- **Clarity** — status, milestone progress, and next action always visible.
 
 ---
 
@@ -96,38 +150,23 @@ Under the hood, Thalos leverages Trustless Work technology to ensure that the lo
     </td>
   </tr>
 </table>
+
 </div>
 
 ---
+
 ## Roadmap
 
-- Enhanced escrow customization logic.
-- Multi-milestone support.
-- Dispute resolution mechanisms.
-- Integration with additional payment rails.
-- Infrastructure expansion for broader digital agreement use cases.
+**Near term**
+- Clearer agreements UX (filters, perspective, next action)
+- Evidence & demo readiness for ecosystem programs
+- Backend hardening (auth, notifications, analytics)
+
+**Next**
+- Deeper agreement templates / customization
+- Additional payment rails
+- Broader digital-agreement use cases
 
 ---
 
-## Get Involved
-
-We are building the trust layer for the future of digital work.
-If you are interested in collaboration, feedback, or partnerships, reach out:
-
-Email: thalosinfrastructure@gmail.com  
-Website: https://www.thalosplatform.xyz
-
----
-
-Thalos — One Platform, Many Solutions
-
-<!--
-
-**Here are some ideas to get you started:**
-
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+Thalos — **Digital agreements.**
