@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="./thalos-agreement-flow.gif" width="720" alt="Thalos agreement lifecycle — Companies & Providers"/>
+  <img src="./thalos-demo-medium.gif"
+       width="600"
+       alt="Thalos"/>
 </p>
 
 <p align="center">
@@ -61,7 +63,7 @@ Companies (payers) and Providers (payees) share one cycle. Either side can open 
 
 ## 1. System Architecture
 
-Four-layer platform architecture: how Thalos connects users to Stellar.
+Four-layer platform: Client → Backend → Escrow (Trustless Work) → Stellar.
 
 | Layer | Components | Status |
 | --- | --- | --- |
@@ -71,47 +73,85 @@ Four-layer platform architecture: how Thalos connects users to Stellar.
 | **Escrow** | Trustless Work API | Active |
 | **Blockchain** | Stellar Network, Soroban smart contracts, USDC trustline | Active |
 
-- **Client** — UI, wallet connect, agreement UX (perspective, status, next action).
-- **Backend** — authentication, agreement metadata, notifications *(roadmap hardening)*.
-- **Escrow** — Trustless Work orchestrates contract operations.
-- **Stellar** — executes and settles on-chain USDC flows.
+<p align="center">
+  <img src="./diagram-1-system-architecture.png" width="820" alt="Thalos system architecture"/>
+</p>
 
 ---
 
 ## 2. Main User Flow
 
-End-to-end journey from first visit to completed agreement. Supports **Personal** and **Enterprise** accounts, with role-specific paths for payers and providers.
+End-to-end journey from first visit to completed agreement. Supports **Personal** and **Enterprise**, with role-specific paths for companies and providers.
 
 | # | Phase | Description |
 | --- | --- | --- |
-| 1 | Entry | Visit thalos.app / landing |
-| 2 | Authentication | Choose Personal or Enterprise · connect wallet |
+| 1 | Entry | Visit platform / landing |
+| 2 | Authentication | Personal or Enterprise · connect wallet |
 | 3 | Dashboard | Active agreements, balances, metrics |
 | 4 | Create Agreement | Title, amount, milestones, counterparty |
-| 5 | Fund Escrow | Payer signs · USDC locked in contract |
-| 6 | Execute Milestones | Work → evidence → review → release loop |
-| 7 | Dispute Resolution | Optional · evidence, arbitration, decision |
+| 5 | Fund Escrow | Payer signs · USDC locked |
+| 6 | Execute Milestones | Work → evidence → review → release |
+| 7 | Dispute Resolution | Optional |
 | 8 | Completion | Settled on-chain · history recorded |
 
-### Agreement lifecycle (Companies & Providers)
+<p align="center">
+  <img src="./diagram-2-main-user-flow.png" width="820" alt="Thalos main user flow"/>
+</p>
 
-One shared cycle — either party can start; roles stay fixed after create:
+---
+
+## 3. Agreement State Flow
+
+Agreement lifecycle states: draft → pending → funded → active → in_review → completed  
+(with dispute / cancel paths).
+
+<p align="center">
+  <img src="./diagram-3-agreement-state-flow.png" width="820" alt="Thalos agreement state flow"/>
+</p>
+
+---
+
+## 4. Complete Milestone Cycle
+
+One milestone loop inside an active agreement: deliver → review → approve/release (or dispute), then next milestone or completion.
+
+<p align="center">
+  <img src="./diagram-4-milestone-cycle.png" width="820" alt="Thalos complete milestone cycle"/>
+</p>
+
+---
+
+## 5. Transaction Sequence
+
+Create · fund · release — how Thalos, wallet, Trustless Work, and Stellar interact.
+
+<p align="center">
+  <img src="./diagram-5-transaction-sequence.png" width="820" alt="Thalos transaction sequence"/>
+</p>
+
+---
+
+## Agreement Lifecycle (Companies & Providers)
+
+Animated overview of the shared cycle: either party can start; fund & approve = Companies; evidence & receive = Providers.
+
+<p align="center">
+  <img src="./thalos-agreement-flow.gif" width="720" alt="Thalos agreement lifecycle animation"/>
+</p>
 
 | Step | Who acts | Notes |
 | --- | --- | --- |
-| Create agreement | Companies or Providers | Roles · milestones · **not funded yet** |
-| Fund escrow | Companies | USDC locked by company |
-| Wallet signs (fund) | Companies | Non-custodial fund tx |
+| Create agreement | Companies or Providers | Not funded yet |
+| Fund escrow | Companies | USDC locked |
+| Wallet signs (fund) | Companies | Non-custodial |
 | Work in progress | Providers | Funded · work can start |
 | Submit evidence | Providers | Deliverable / GitHub |
 | In review | Companies | Approve · change · dispute |
 | Dispute *(optional)* | Both | Trustless Work rules |
 | Approve milestone | Companies | Unlocks release |
-| Wallet signs (release) | Companies | Non-custodial release |
+| Wallet signs (release) | Companies | Non-custodial |
 | Release funds | Providers | USDC to provider |
 | Completed | Providers | Settled on-chain |
-
-**On-chain rails:** Trustless Work (audited Soroban escrow) · Stellar (USDC settlement).
 
 ---
 
@@ -120,7 +160,7 @@ One shared cycle — either party can start; roles stay fixed after create:
 - **Security first** — funds protected by enforceable on-chain logic.
 - **Simplicity** — escrow should feel like normal product UX.
 - **Neutrality** — protect company and provider equally.
-- **Clarity** — status, milestone progress, and next action always visible.
+- **Clarity** — status, progress, and next action always visible.
 
 ---
 
