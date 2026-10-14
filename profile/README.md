@@ -1,7 +1,6 @@
 <p align="center">
-  <img src="./thalos-demo-medium.gif"
-       width="600"
-       alt="Thalos"/>
+![Uploading thalos_dragon-tagline.gif…]()
+
 </p>
 
 <p align="center">
