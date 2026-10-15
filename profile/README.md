@@ -113,7 +113,7 @@ Agreement lifecycle states: draft → pending → funded → active → in_revie
 One milestone loop inside an active agreement: deliver → review → approve/release (or dispute), then next milestone or completion.
 
 <p align="center">
-  <img src="./diagram-4-milestone-cycle.png" width="820" alt="Thalos complete milestone cycle"/>
+  <img src="./diagram-4-milestone-cycle.gif" width="820" alt="Thalos complete milestone cycle"/>
 </p>
 
 ---
