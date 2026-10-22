@@ -92,7 +92,7 @@ End-to-end journey from first visit to completed agreement. Supports **Personal*
 | 8 | Completion | Settled on-chain · history recorded |
 
 <p align="center">
-  <img src="./diagram-2-main-user-flow-v3.gif" width="820" alt="Thalos main user flow"/>
+  <img src="./diagram-2-main-user-flow-v4.gif" width="820" alt="Thalos main user flow"/>
 </p>
 
 ---
@@ -103,7 +103,7 @@ Agreement lifecycle states: draft → pending → funded → active → in_revie
 (with dispute / cancel paths).
 
 <p align="center">
-  <img src="./diagram-3-agreement-state-flow.png" width="820" alt="Thalos agreement state flow"/>
+  <img src="./diagram-3-agreement-state-flow-v2.png" width="820" alt="Thalos agreement state flow"/>
 </p>
 
 ---
