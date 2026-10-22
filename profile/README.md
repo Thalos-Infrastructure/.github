@@ -71,7 +71,7 @@ Four-layer platform: Client → Backend → Escrow (Trustless Work) → Stellar.
 | **Blockchain** | Stellar Network, Soroban smart contracts, USDC trustline | Active |
 
 <p align="center">
-  <img src="./diagram-1-system-architecture.png" width="820" alt="Thalos system architecture"/>
+  <img src="./diagram-1-system-architecture-v2.png" width="820" alt="Thalos system architecture"/>
 </p>
 
 ---
