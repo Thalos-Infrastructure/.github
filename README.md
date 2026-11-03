@@ -7,7 +7,7 @@
 
 # Thalos
 
-Thalos is a trustless escrow infrastructure designed to bring security, clarity, and reliability to digital work agreements. 
+Thalos is a trustless agreement platform designed to bring security, clarity, and reliability to digital work agreements. 
 
 ---
 
