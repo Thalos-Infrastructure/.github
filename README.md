@@ -23,7 +23,7 @@ Our goal is to make digital agreements as secure as they are simple.
 
 ## Vision
 
-To become the foundational trust infrastructure for digital work worldwide.
+To become the foundational trust platform for digital work worldwide.
 
 We envision a future where remote collaboration, freelance work, and global partnerships operate without fear of non-payment, fraud, or ambiguity — where trust is embedded directly into the system.
 
